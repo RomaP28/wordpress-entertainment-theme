@@ -1,0 +1,68 @@
+@import "variables";
+
+.x-card {
+  .content-area{
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0 188px;
+
+    .text{
+      max-width: 681px;
+    }
+    .cards{
+      width: 519px;
+      img{
+        height: auto;
+      }
+    }
+    p, h3{
+      color: @white;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: -0.02em;
+    }
+    p {
+      margin-top: 56px;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 300;
+    }
+    .btn{
+      margin-top: 63px;
+    }
+  }
+  .book-event{
+    display: none;
+  }
+  .gift-card{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .x-card {
+      h1 span {
+        display: inline;
+      }
+      .content-area{
+        padding: 40px 0 407px;
+        p {
+          margin-top: 48px;
+          font-size: 16px;
+          line-height: 26px;
+        }
+        .cards{
+          display: none;
+        }
+        .btn{
+          margin-top: 56px;
+        }
+      }
+      .gift-card{
+        display: block;
+      }
+  }
+}

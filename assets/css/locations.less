@@ -1,0 +1,236 @@
+@import "variables";
+
+.location-page {
+  .btn-transparent {
+    width: auto;
+  }
+  h1 {
+    font-family: @font-g-u;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 92px;
+    text-transform: uppercase;
+    color: @white;
+    span {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2px @white;
+      font-family: @font-g-u;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 96px;
+      line-height: 92px;
+      text-transform: uppercase;
+    }
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: @white;
+    margin-bottom: 36px;
+  }
+  p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+  u {
+    text-decoration: underline;
+  }
+  .banner {
+    height: calc(550 / 1440 * 100vw);
+    background-image: url(../img/hero-banner-about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .container {
+      padding-bottom: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: 100%;
+    }
+  }
+  .locations-list {
+    padding: 100px 0 192px;
+    .item {
+      display: flex;
+      align-items: flex-start;
+      grid-gap: 36px;
+      padding-bottom: 64px;
+      &:not(:last-child) {
+        margin-bottom: 64px;
+        border-bottom: 1px solid #528BFF;
+      }
+      .quote{
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        color: @white;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .map {
+      max-width: 214px;
+      width: 100%;
+      background: linear-gradient(0deg, #120550, #120550);
+      border-radius: 20px 0;
+    }
+    .info {
+      max-width: 375px;
+      width: 100%;
+      padding-left: 32px;
+    }
+    .name {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: -0.02em;
+      color: @white;
+      margin-bottom: 24px;
+    }
+    .address {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: @white;
+      margin-bottom: 24px;
+    }
+    .mail {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: @a-blue;
+      margin-bottom: 24px;
+    }
+    .phone {
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 26px;
+      color: @white;
+    }
+    .work-time {
+      display: grid;
+      grid-column-gap: 10px;
+      grid-template: auto / 95px 1fr;
+      .head {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: @white;
+        margin-bottom: 10px;
+      }
+      div:not(.head) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: @white;
+        b {
+          font-weight: 500;
+        }
+      }
+    }
+    .buttons {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .locations-list {
+      .info {
+        padding-left: 16px;
+        max-width: 320px;
+      }
+      .item {
+        grid-gap: 16px;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    h1 {
+      font-size: 48px;
+      line-height: 48px;
+      span {
+        font-size: 48px;
+        line-height: 48px;
+        display: block;
+      }
+    }
+    .banner {
+      height: 265px;
+      .container {
+        padding-bottom: 84px;
+      }
+    }
+    .locations-list {
+      .map {
+        display: none;
+      }
+      .name {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.02em;
+      }
+      .mail, .phone, .address {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      .info {
+      }
+      .item {
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .locations-list {
+      padding-top: 54px;
+      .item {
+        flex-direction: column;
+        grid-gap: 36px;
+        max-width: 343px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .info {
+        padding: 0;
+      }
+      .buttons {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+    .btn, .btn-transparent {
+      max-width: 343px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .book-event {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 52px;
+      line-height: 50px;
+      span {
+        font-size: 52px;
+        line-height: 50px;
+      }
+    }
+    .banner {
+
+    }
+  }
+}

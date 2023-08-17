@@ -1,0 +1,330 @@
+@import "variables";
+
+.eat-page {
+  .banner {
+    height: calc(736 / 1440 * 100vw);
+    background-image: url("../img/eat-drink/hero-banner-eat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .container {
+      padding-bottom: 158px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: 100%;
+    }
+    .bg-text {
+      display: none;
+    }
+    h1 {
+      font-family: @font-g-u;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 96px;
+      line-height: 92px;
+      text-transform: uppercase;
+      color: @white;
+
+      span {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px @white;
+        font-family: @font-g-u;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 92px;
+        text-transform: uppercase;
+      }
+    }
+    p {
+      margin-top: 24px;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
+      color: @white;
+      max-width: 647px;
+    }
+  }
+
+  .products-section {
+
+  }
+  .products-types {
+    overflow: hidden;
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -92px;
+    display: flex;
+    .item {
+      height: 810px;
+      position: relative;
+      .content {
+        position: absolute;
+        left: 34px;
+        bottom: 130px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 86px;
+        width: 102%;
+        //width: 100%;
+        background-color: @white;
+      }
+      &.swiper-slide-active:after {
+        clip-path: polygon(0 0, 33% 0, 50% 66%, 66% 0, 100% 0, 100% 100%, 0 100%);
+      }
+      &:hover {
+        p {
+          display: block;
+        }
+        .start-at {
+          display: block;
+        }
+        .price {
+          display: block;
+        }
+      }
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 60px;
+      letter-spacing: -0.02em;
+      color: @white;
+      margin-bottom: 16px;
+    }
+    p {
+      max-width: 240px;
+      display: none;
+      color: @white;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+    .start-at {
+      display: none;
+      color: @white;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .price {
+      display: none;
+      color: @white;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+  }
+  .product-types-menu {
+    position: relative;
+    transform: translateY(-1px);
+    background-color: @white;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    .container {
+      padding-top: 44px;
+      padding-bottom: 126px;
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 32px;
+
+    h3 {
+      margin: 14px 0 10px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
+      color: @navy;
+      span {
+        color: @a-orange;
+      }
+    }
+    p {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 32px;
+      color: @navy;
+    }
+    &-item {
+      max-width: calc(50% - 32px);
+      width: 100%;
+      &.info {
+        padding-top: 14px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: @navy;
+      }
+    }
+  }
+  .bottom-text {
+    padding-top: 48px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: @navy;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+  @media (min-width: 1201px){
+    .products-types {
+      .item {
+        height: initial;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .banner .container {
+      padding-bottom: 90px;
+    }
+    .products-types {
+      .item {
+        max-width: 500px;
+        //height: 800px;
+        height: initial;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .banner {
+      min-height: auto;
+      height: 360px;
+      .container {
+        padding-bottom: 82px;
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 48px;
+
+        span {
+          font-size: 48px;
+          line-height: 48px;
+          -webkit-text-stroke: 1px @white;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .container {
+        padding-bottom: 76px;
+      }
+    }
+    .products-types {
+      clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+      margin-top: -16px;
+    }
+  }
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      grid-gap: 16px;
+      &-item {
+        max-width: 100%;
+
+        span{
+          display: block;
+        }
+      }
+
+      p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+  @media (max-width: 768px){
+    .products-types {
+      .item {
+        max-width: 313px;
+        height: 528px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .products-types {
+      .item {
+        &.swiper-slide-active:after {
+          clip-path: polygon(0 0, 25% 0, 50% 75%, 75% 0, 100% 0, 100% 100%, 0 100%);
+        }
+        &:after {
+          height: 60px;
+        }
+      }
+    }
+    .product-types-menu {
+      .container {
+        padding-top: 0;
+      }
+    }
+    .book-event {
+      display: none;
+    }
+    .product-types-menu {
+      border-radius: 0;
+      .container {
+        padding-bottom: 226px;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .banner {
+      background-position: 94% center;
+      height: auto;
+      .container {
+        //padding-bottom: 32px;
+        padding: 112px 12px 72px;
+      }
+      h1 {
+        font-size: 52px;
+        line-height: 50px;
+        span {
+          font-size: 52px;
+          line-height: 50px;
+        }
+      }
+      p {
+        max-width: 325px;
+        margin-top: 46px;
+        font-weight: 300;
+        strong{
+          //font-weight: 400;
+        }
+      }
+    }
+    .menu {
+      h3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    .products-types .item .content {
+      bottom: 90px;
+    }
+  }
+}
